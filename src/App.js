@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/Home/Home';
+import Statistics from './pages/Statistics/Statistics';
+import Header from './components/Header/Header';
+import { Spinner } from './components/Spinner/Spinner';
+import { useSelector } from 'react-redux';
 function App() {
+  const loading = useSelector((state) => state.app.isLoading);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Header />
+      <Routes>
+        <Route path="/" element={loading ? <Spinner /> : <Home />} />
+        <Route path="/statistics" element={<Statistics />} exact />
+      </Routes>
     </div>
   );
 }
-
 export default App;

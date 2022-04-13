@@ -1,0 +1,37 @@
+@import '../../styles/variables.scss';
+
+.day {
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    font-size: 28px;
+    background: var(#{ --components-background-default});
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+}
+.top_block {
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+    margin-bottom: 28px;
+    svg {
+        width: 119px;
+        height: 119px;
+    }
+}
+.day_temp {
+    font-size: 70px;
+    font-weight: 500;
+    color: $primary-color
+}
+.day_name {
+font-size: 35px;
+color: var(#{--text-color-default});
+}
+.bottom_block {
+    .day_time,
+    .day_city {
+        color: $base-color;
+        font-size: 25px;
+    }
+}

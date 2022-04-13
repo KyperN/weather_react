@@ -1,0 +1,51 @@
+@import '../../styles/variables.scss';
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding: 40px;
+    max-width: 759px;
+    width: 100%;
+    background-color: $lite-background;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    background: $lite-background;
+}
+.close {
+    position: absolute;
+    top: 0%;
+    right: 0;
+    padding: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+        transform: rotate(360deg);
+    }
+}
+.day {
+   .day_temp {
+    font-weight: 500;
+    color: $primary-color;
+    font-size: 40px;
+    margin-bottom:12px;
+   }
+   .day_name {
+       font-size: 25px;
+       font-weight: 500;
+      
+       margin-bottom:12px;
+   }
+   .img {
+    width: 53px;
+    height:53px;
+   }
+   .time, .city {
+    margin-bottom:12px;
+    color: $base-color;
+   }
+    
+}
